@@ -254,7 +254,7 @@
         <section id="contact" class="gpd-section">
             <div class="gpd-container gpd-cnt">
                 <h1 id="itl0tw" class="gpd-header" style="text-align: center;">Kontakt a zpětná vazba</h1>
-                <form method="post" action="https://mailthis.to/aplikaceslovicka@gmail.com" encType="multipart/form-data" class="form">
+                <form method="post" data-redirect="" class="form">
                     <div class="form-group"><label id="igz3id" class="label">Jméno<br></label><input type="text"
                             placeholder="Zadejte vaše jméno" name="firstname" id="iomfy1" class="input" /></div>
                     <div class="form-group"><label id="iaklrl" class="label">E-mail</label><input type="email"
@@ -268,6 +268,8 @@
                     <div class="form-group"><label id="im5csf" class="label">Zpráva</label><textarea name="message"
                             placeholder="Napište obsah vaši zprávy" id="iage5i" class="textarea"></textarea></div>
                     <div class="form-group"><button type="submit" id="ictkyc" class="button">Odeslat</button></div>
+                    <div data-form-state="success" id="iwtwfq" class="state-success">Děkujeme vám, zpráva byla úspěšně odeslána!</div>
+                    <div data-form-state="error" id="ic1mkg" class="state-error">Při odesílání zprávy došlo k chybě!</div>
                 </form>
             </div>
         </section>
@@ -290,5 +292,6 @@
         
         <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" onload="postJQ()"></script>
         <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>

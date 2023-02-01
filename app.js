@@ -63,12 +63,13 @@ submitButton.addEventListener("click", async (e) => {
         db.doc(groupCode)
         .set({
           AppName: "Slovicka_WEB",
-          AppVersion: "0.8",
+          AppVersion: "0.9",
           GroupCode: groupCode,
           GroupName: groupName,
           FirstLang: firstLang,
           SecondLang: secondLang,
           Translates: translates,
+          GroupAccess: false,
         })
         .then(() => { })
         .catch((error) => {
@@ -77,8 +78,7 @@ submitButton.addEventListener("click", async (e) => {
 
         //Vytvoření QR kódu
         var container = document.querySelector(".container");
-        var qr_string = "Slovicka_WEB; AppVersion: 0.7; GroupCode: " + groupCode + "; GroupName: " + groupName + ";";
-        //var qr_result = strEncodeUTF16(qr_string);
+        var qr_string = "Slovicka_WEB; AppVersion: 0.9; GroupCode: " + groupCode + "; GroupName: " + groupName + ";";
         var qr_result = Base64.encode(qr_string);
         console.log(qr_string); console.log(qr_result);
         var qrImg = document.querySelector(".qr-image");
@@ -256,3 +256,16 @@ var FirebaseClass = /** @class */ (function () {
     };
     return FirebaseClass;
 }());
+
+
+//
+//Kontaktní formulář
+//
+
+let submitbtn = document.getElementById("ictkyc");
+
+submitbtn.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  alert("Děkujeme vám, zpráva byla úspěšně odeslána!");
+});
